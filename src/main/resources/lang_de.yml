@@ -1,0 +1,182 @@
+#Ausgabe wenn der Spieler nicht die notwendigen Rechte hat
+
+NoPermission: '%prefix% &cDu hast nicht die Permissions um diesen Befehl zu benutzen.'
+
+#Fehler wenn der Befehl nicht als Spieler benutzt wird z.B. Konsole
+
+OnlyPlayers: '%prefix% &cNur Spieler duerfen diesen Befehl benutzen!'
+
+#Fehler Spieler nicht online
+
+NotOnline: '%prefix% &6Spieler ist nicht online.'
+
+#Falsche Syntax
+
+WrongSyntax: '%prefix% &6Dieser Befehl ist falsch. Nutze &e/help!'
+
+#Commandausgaben
+
+Commands:
+
+  #Addresident Ausgaben
+  Addresident:
+
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /addresident <Spielername>.'
+    OnlyOwner: '%prefix% &cNur der Owner kann dies tun.'
+    Finish: '%prefix% &c%player% ist nun Mitbewohner auf deiner Welt.'
+    Error: '%prefix% &cVorgang wegen Fehler abgebrochen.'
+
+  #Createworld Ausgaben
+  Createworld:
+    Create: '%prefix% &4Welt &e%world% &4wird erstellt...'
+    Finish: '%prefix% &cWelt &e%world% &cerfolgreich erstellt.'
+    WrongSyntaxEnvironment: '%prefix% &c/createworld <Name> <Environment (normal | nether | end)> <Type (normal | flat | amplified | bigbiome)>'
+    IsWorld: '%prefix% &cError Welt existiert schon'
+    MaxError: '%prefix% &cError Du hast die maximale Anzahl Welten erreicht'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /createworld oder /createworld <Weltname> <Environment (normal | nether | end)> <Type (normal | flat | amplified | bigbiome)>'
+
+  Createvoid:
+    IsVoid: '%prefix% &cVoid existiert schon'
+    VoidSourceFail: '%prefix% &cVoidquelle fehlt'
+    Finish: '%prefix% &3Deine Void wurde angelegt'
+    Teleport: '%prefix% &cDu wurdest in deine neue Void teleportiert'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /createworld <Weltname> <Spielername>'
+
+  Createserver:
+    Create: '%prefix% &4Welt &e%world% &4wird erstellt...'
+    Finish: '%prefix% &cWelt &e%world% &cerfolgreich erstellt.'
+    WrongSyntaxEnvironment: '%prefix% &c/createserverworld <Name> <Environment (normal | nether | end)> <Type (normal | flat | amplified | bigbiome)>'
+    IsWorld: '%prefix% &cError Welt existiert schon'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /createserverworld <Weltname> <Environment (normal | nether | end)> <Type (normal | flat | amplified | bigbiome)>")'
+
+  #Delworld Ausgaben
+  Delworld:
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /deleteworld <Weltname>'
+    NoWorld: '%prefix% &cWelt existiert nicht'
+    Finish: '%prefix% &cDie Welt &5%world% &awurde erfolgreich entfernt!'
+    Defaultworld: '%prefix% &cDie Hauptwelt kann nicht entfernt werden!'
+
+  Delserver:
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /delserverworld <Weltname>'
+    NoWorld: '%prefix% &cWelt existiert nicht'
+    Finish: '%prefix% &cDie Welt &5%world% &awurde erfolgreich entfernt!'
+
+  #Delresident Ausgaben
+
+  Delresident:
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /delresident <Spielername>'
+    NotOnline: '%prefix% &cDer Spieler ist nicht online.'
+    OnlyOwner: '%prefix% &cNur der Owner der Welt darf dies tun.'
+    FinishPlayer: '%prefix% &cDu wurdest als Mitbewohner entfernt.'
+    Finish: '%prefix% &c%player% wurde nun als Mitbewohner entfernt'
+    Error: '%prefix% &cVorgang wegen Fehler abgebrochen.'
+
+  #Leaveworld Ausgaben
+  Leaveworld:
+    OnlyOwner: '%prefix% &cNur der Owner der Welt darf dies tun.'
+    Finish: '%prefix% &cDu hast deine Welt erfolgreich verlassen.'
+
+  #List Ausgaben
+  List:
+    Message: '%prefix% &6%worlds%.'
+
+  #Load Ausgaben
+  Load:
+    Finish: '%prefix% &2Du hast die Welt &6%world% &2erfolgreich geladen.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /load <Weltname>'
+
+  #Lock Ausgaben
+  Lockworld:
+    Finish: '%prefix% &cDeine Welt ist jetzt gelockt und kann nur von dir und deinen Mitbewohnern betreten werden'
+    FinishPlayer: '%prefix% &cDer Owner dieser Welt hat die Welt wieder gelockt.'
+    OnlyOwner: '%prefix% &cNur der Owner kann dies tun'
+
+  #Setowner Ausgaben
+  Setowner:
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /setowner <Spielername>'
+    Finish: '%prefix% &c%player% ist nun der Owner dieser Welt'
+    FinishPlayer: '%prefix% &cDu bist nun Owner dieser Welt'
+    Error: '%prefix% &cVorgang konnte nicht erfolgreich beendet werden.'
+    MaxError: '%prefix% &cDer Spieler %player% hat schon seine maximale Anzahl Welten erreicht.'
+
+  #Settp Ausgaben
+  Settp:
+    Error: '%prefix% &cSpawnpunkt konnte nicht verlegt werden'
+    Finish: '%prefix% &cSpawnpunkt deiner Welt erfolgreich verlegt.'
+    OnlyOwner: '%prefix% &cNur der Owner dieser Welt kann den Spawnpunkt verlegen.'
+    NoFile: '%prefix% &cDie Weltdatei konnte nicht geladen werden'
+
+  #Tpworld Ausgaben
+  Tpworld:
+    NoWorldCreated: '%prefix% &cDu hast noch keine eigene Welt erstellt. Bitte nutze /createworld oder gib eine Welt an in der du Mitbewohner bist.'
+    NoOwnWorld: '%prefix% &cDu besitzt keine eigene Welt.'
+    Error: '%prefix% &cFehler: Welt existiert nicht'
+    ErrorWorld: '%prefix% &cDer Owner hat die Welt verlassen oder die Welt wurde entfernt.'
+    NotExists: '%prefix% &cWelt existiert nicht oder du bist nicht berechtigt'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Benutze bitte /tpworld oder /tpworld <Weltname>'
+
+  #Tpa Ausgaben
+  Tpa:
+    Message: '%prefix% &c%player% hat dir eine Teleportanfrage geschickt. Um zu akzeptieren benutze /tpaccept. Um ab zu lehnen benutze /tpadeny.'
+    MessagePlayer: '%prefix% &cTeleportanfrage gesendet.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /tpa <Spielername>'
+
+  Tpaccept:
+    Finish: '%prefix% &c%player% wurde zu dir teleportiert.'
+    FinishPlayer: '%prefix% &cDu wurdest zu %player% teleportiert.'
+    Locked: '%prefix% &cDeine Welt ist gelockt, um den Spieler in deine Welt zu teleportieren entsperre deine Welt mit /unlock.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    NoRequest: '%prefix% &cDu hast keine Teleportanfragen.'
+    NoFile: '%prefix% &cTeleportrequestdatei nicht gefunden.'
+
+  Tpadeny:
+    Denied: '%prefix% &c%player% hat die Anfrage verweigert.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    NoRequest: '%prefix% &cDu hast keine Teleportanfragen.'
+    NoFile: '%prefix% &cTeleportrequestdatei nicht gefunden.'
+
+  #Tpahere Ausgaben
+  Tpahere:
+    Message: '%prefix% &c%player% hat dir eine Teleportanfrage geschickt. Um zu akzeptieren benutze /tpahereaccept. Um ab zu lehnen benutze /tpaheredeny.'
+    MessagePlayer: '%prefix% &cTeleportanfrage gesendet.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /tpahere <Spielername>'
+
+  Tpahereaccept:
+    Finish: '%prefix% &c%player% wurde zu dir teleportiert.'
+    FinishPlayer: '%prefix% &cDu wurdest zu %player% teleportiert.'
+    Locked: '%prefix% &cDeine Welt ist gelockt, um den Spieler in deine Welt zu teleportieren entsperre deine Welt mit /unlock.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    NoRequest: '%prefix% &cDu hast keine Teleportanfragen.'
+    NoFile: '%prefix% &cTeleportrequestdatei nicht gefunden.'
+
+  Tpaheredeny:
+    Denied: '%prefix% &c%player% hat die Anfrage verweigert.'
+    NotOnline: '%prefix% &cSpieler ist nicht online.'
+    NoRequest: '%prefix% &cDu hast keine Teleportanfragen.'
+    NoFile: '%prefix% &cTeleportrequestdatei nicht gefunden.'
+
+  #Unload Ausgaben
+  Unload:
+    NoWorld: '%prefix% &cDiese Welt existiert nicht und kann nicht entladen werden.'
+    Finish: '%prefix% &2Du hast die Welt &6%world% &2erfolgreich entladen.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /unload <Weltname>'
+
+  #Unlock Ausgaben
+  Unlock:
+    OnlyOwner: '%prefix% &cNur der Owner kann dies tun'
+    Finish: '%prefix% &cDeine Welt ist jetzt entsperrt und kann von jedem betreten werden.'
+    WrongSyntax: '%prefix% &cFalsche Syntax. Bitte benutze /unlock.'
+
+  #Worldinfo Ausgaben
+  Worldinfo:
+    WrongSyntax: '%prefix% &cFalsche Syntax. Benutze bitte /worldinfo oder /worldinfo <Weltname>'
+
+  #Import Ausgaben
+  Import:
+    Finish: '%prefix% &aDie Welt %world% wurde erfolgreich importiert'
+    Error: '%prefix% &cDie Welt %world% existiert bereits in der Datenbank!'
+    WorldError: '%prefix% &cDie Welt %world% existiert nicht!'
+      

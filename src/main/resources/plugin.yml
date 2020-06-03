@@ -1,0 +1,98 @@
+name: SkullTechMultiworld
+authors: [SkullDrago, gyuriX]
+version: 1.0.0
+description: World Management Plugin fuer den SkullTech Server
+
+main: de.skulldrago.multiworld.main.Multiworld
+
+commands:
+  addresident:
+    description: Bewohner in deine Welt eintragen
+    usage: /addresident <Spieler>
+    permission: Multiworld.residents
+  createworld:
+    description: Welt erstellen
+    usage: /createworld <Weltname> <normal|nether|end> <normal|flat|amplified|bigbiomes>
+    permission: Multiworld.create, Multiworld.admin, Multiworld.g1-3, Multiworld.v1-3
+  createvoid:
+    description: Void Welt erstellen
+    usage: /createvoid <Voidname> <Spieler>
+    permission: Multiworld.void
+  createserverworld:
+    description: Allgemeine Server Welt erstellen
+    usage: /createserverworld <Weltname> <normal|nether|end> <normal|flat|amplified|bigbiomes>
+    permission: Multiworld.all
+  deleteworld:
+    description: Welt entfernen
+    usage: /deleteworld <Weltname>
+    permission: Multiworld.delete
+  delresident:
+    description: Bewohner von deiner Welt entfernen
+    usage: /delresident <Spieler>
+    permission: Multiworld.residents
+  leaveworld:
+    description: Deine Welt aufgeben
+    usage: /leaveworld
+    permission: Multiworld.leave
+  wlist:
+    description: Liste aller Welten aufrufen
+    usage: /wlist
+  load:
+    description: Welt laden
+    usage: /load <Weltname>
+    permission: Multiworld.load
+  unload:
+    description: Welt entladen
+    usage: /unload <Weltname>
+    permission: Multiworld.load
+  lock:
+    description: Welt sperren
+    usage: /lock
+    permission: Multiwold.lock
+  setowner:
+    description: Owner der Welt festlegen
+    usage: /setowner <Spieler>
+    permission: Multiworld.setowner
+  settpworld:
+    description: Spawnpunkt in der eigenen Welt setzten
+    usage: /settpworld
+    permission: Multiworld.settp
+  tpworld:
+    description: Zu der eigenen Welt teleportieren
+    usage: /tpworld oder /tpworld <Weltname>
+    permission: Multiworld.tp, Multiworld.admin
+  unlock:
+    description: Welt entsperren
+    usage: /unlock
+    permission: Multiworld.lock
+  worldinfo:
+    description: Weltinfo
+    usage: /worldinfo <Weltname>
+  tpa:
+    description: Teleportanfrage an Spieler senden
+    usage: /tpa <Spieler>
+    permission: Multiworld.tpa
+  tpaccept:
+    description: Teleportanfrage akzeptieren
+    usage: /tpaccept
+    permission: Multiworld.tpa
+  tpadeny:
+    description: Teleportanfrage verweigern
+    usage: /tpadeny
+    permission: Multiworld.tpa
+  tpahere:
+    description: Anfrage Spieler zu einem hin zu teleportieren
+    usage: /tpahere <Spieler>
+    permission: Multiworld.tpahere
+  tpahereaccept:
+    description: Anfrage akzeptieren
+    usage: /tpahereaccept
+    permission: Multiworld.tpahere
+  tpaheredeny:
+    description: Anfrage verweigern
+    usage: /tpaheredeny
+    permission: Multiworld.tpahere
+  import:
+    description: Bereits vorhandene Welten importieren
+    usage: /import <Weltname>
+    permission: Multiworld.import
